@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_ecommerse/constants/asset_images.dart';
+import 'package:flutter_ecommerse/widgets/primary_button/primary_button.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Welcome extends StatelessWidget {
+  const Welcome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class Login extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
-              height: kToolbarHeight,
+              height: kToolbarHeight + 30,
             ),
             const Padding(
               padding: EdgeInsets.only(left: 30.0),
@@ -74,6 +76,26 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 30.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+              child: PrimaryButton(
+                title: "Log In",
+                onPressed: () {},
+              ),
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+              child: PrimaryButton(
+                title: "Sign Up",
+                onPressed: () {},
+              ),
             ),
           ],
         ),
