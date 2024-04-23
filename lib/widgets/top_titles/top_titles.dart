@@ -9,9 +9,6 @@ class TopTitles extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(
-          height: kToolbarHeight + 30,
-        ),
         Padding(
           padding: const EdgeInsets.only(left: 30.0),
           child: Text(

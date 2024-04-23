@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerse/constants/asset_images.dart';
+import 'package:flutter_ecommerse/constants/routes.dart';
+import 'package:flutter_ecommerse/screens/auth_ui/login/login.dart';
 import 'package:flutter_ecommerse/widgets/primary_button/primary_button.dart';
 import 'package:flutter_ecommerse/widgets/top_titles/top_titles.dart';
 
@@ -15,6 +17,9 @@ class Welcome extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(
+              height: kToolbarHeight + 30,
+            ),
             const TopTitles(
                 title: "Welcome", subtitle: "Buy items from SH ecommerce"),
             const SizedBox(
@@ -61,7 +66,9 @@ class Welcome extends StatelessWidget {
               padding: const EdgeInsets.only(left: 30.0, right: 30.0),
               child: PrimaryButton(
                 title: "Log In",
-                onPressed: () {},
+                onPressed: () {
+                  Routes.instance.push(widget: const Login(), context: context);
+                },
               ),
             ),
             const SizedBox(
