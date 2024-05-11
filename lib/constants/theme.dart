@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 ThemeData themeData = ThemeData(
   scaffoldBackgroundColor: Colors.white,
+  primaryColor: Colors.red,
   inputDecorationTheme: InputDecorationTheme(
     border: outlineInputBorder,
     errorBorder: outlineInputBorder,

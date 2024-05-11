@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerse/widgets/primary_button/primary_button.dart';
 import 'package:flutter_ecommerse/widgets/top_titles/top_titles.dart';
 
 class Login extends StatefulWidget {
@@ -71,6 +72,36 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 30.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+              child: Column(
+                children: [
+                  PrimaryButton(
+                    title: "Login",
+                    onPressed: () {},
+                  ),
+                  const SizedBox(height: 30.0),
+                  const Text("Don't have an account?"),
+                  const SizedBox(
+                    height: 5.0,
+                  ),
+                  CupertinoButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Create an account",
+                      style: TextStyle(
+                        color: Theme.of(context).primaryColor,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
