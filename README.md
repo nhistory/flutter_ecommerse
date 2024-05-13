@@ -2,15 +2,30 @@
 
 A new Flutter project.
 
-## Getting Started
+# Flutter Routing
 
-This project is a starting point for a Flutter application.
+Routing in Flutter refers to the process of navigating between different screens or pages within a Flutter application. Flutter provides a powerful and flexible routing system that allows developers to define and manage navigation flows efficiently.
 
-A few resources to get you started if this is your first Flutter project:
+## routes.dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+In this project, Routes instances were identified at the `/lib/constants/routes.dart` instead of using `Navigator` API directly.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+// routes.dart
+class Routes {
+  static Routes instance = Routes();
+  Future<dynamic> pushAndRemoveUntil(
+      {required Widget widget, required BuildContext context}) {
+    return Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(builder: (ctx) => widget), (route) => false);
+  }
+
+  Future<dynamic> push(
+      {required Widget widget, required BuildContext context}) {
+    return Navigator.of(context)
+        .push(MaterialPageRoute(builder: (ctx) => widget));
+  }
+}
+```
+
+> [!NOTE] Flutter applications with advanced navigation and routing requirements (such as a web app that uses direct links to each screen, or an app with multiple Navigator widgets) should use a routing package such as go_router that can parse the route path and configure the Navigator whenever the app receives a new deep link.
