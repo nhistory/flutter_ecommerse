@@ -1,18 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerse/constants/routes.dart';
-import 'package:flutter_ecommerse/screens/auth_ui/sign_up/sign_up.dart';
 import 'package:flutter_ecommerse/widgets/primary_button/primary_button.dart';
 import 'package:flutter_ecommerse/widgets/top_titles/top_titles.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LoginState extends State<Login> {
+class _SignUpState extends State<SignUp> {
   bool isShowPassword = true;
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class _LoginState extends State<Login> {
               height: 12.0,
             ),
             const TopTitles(
-                title: "Login", subtitle: "Welcome back to SH ecommerce"),
+                title: "Create Account", subtitle: "Welcome to SH ecommerce"),
             const SizedBox(
               height: 30.0,
             ),
@@ -93,10 +91,7 @@ class _LoginState extends State<Login> {
                     height: 5.0,
                   ),
                   CupertinoButton(
-                    onPressed: () {
-                      Routes.instance
-                          .push(widget: const SignUp(), context: context);
-                    },
+                    onPressed: () {},
                     child: Text(
                       "Create an account",
                       style: TextStyle(
