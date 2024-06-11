@@ -84,7 +84,7 @@ class _LoginState extends State<Login> {
               child: Column(
                 children: [
                   PrimaryButton(
-                    title: "Login",
+                    title: "Log In",
                     onPressed: () {},
                   ),
                   const SizedBox(height: 30.0),

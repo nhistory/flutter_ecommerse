@@ -39,9 +39,39 @@ class _SignUpState extends State<SignUp> {
               padding: const EdgeInsets.only(left: 30.0, right: 30.0),
               child: TextFormField(
                 decoration: const InputDecoration(
+                  hintText: "Name",
+                  prefixIcon: Icon(
+                    Icons.person_2_outlined,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+              child: TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                decoration: const InputDecoration(
                   hintText: "E-mail",
                   prefixIcon: Icon(
                     Icons.email_outlined,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30.0, right: 30.0),
+              child: TextFormField(
+                keyboardType: TextInputType.phone,
+                decoration: const InputDecoration(
+                  hintText: "Phone",
+                  prefixIcon: Icon(
+                    Icons.phone_outlined,
                   ),
                 ),
               ),
@@ -82,18 +112,18 @@ class _SignUpState extends State<SignUp> {
               child: Column(
                 children: [
                   PrimaryButton(
-                    title: "Login",
+                    title: "Create an Account",
                     onPressed: () {},
                   ),
                   const SizedBox(height: 30.0),
-                  const Text("Don't have an account?"),
+                  const Text("I already have an account?"),
                   const SizedBox(
                     height: 5.0,
                   ),
                   CupertinoButton(
                     onPressed: () {},
                     child: Text(
-                      "Create an account",
+                      "Login",
                       style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontSize: 16.0,
